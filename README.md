@@ -54,3 +54,7 @@ Soy **Russo**, creativo, persistente y apasionado por el diseño web. Me gusta a
 
 ---
 
+## Quieres previsualizarlo?
+
+Aqui: (https://yeahshirtsshop.netlify.app/)
+
