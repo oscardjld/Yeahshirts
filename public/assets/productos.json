@@ -1,0 +1,23 @@
+[
+    {
+        "id": "anime-001",
+        "name": "Camisa Naruto",
+        "category": "Anime",
+        "price": 18.99,
+        "image": "/images/naruto-shirt.jpg"
+    },
+    {
+        "id": "anime-002",
+        "name": "Camisa One Piece",
+        "category": "Anime",
+        "price": 19.99,
+        "image": "/images/onepiece-shirt.jpg"
+    },
+    {
+        "id": "anime-003",
+        "name": "Camisa Attack on Titan",
+        "category": "Anime",
+        "price": 17.50,
+        "image": "/images/aot-shirt.jpg"
+    }
+]

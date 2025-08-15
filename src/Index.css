@@ -1,0 +1,79 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('/brick-bg.jpg'); /* desde public */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #fdfdfd;
+}
+
+/* para el navbar */ 
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  }
+
+  .navbar-nav .nav-link {
+  color: #fdfdfd;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  transform: scale(1.50);
+}
+
+/* Boton personalizado */
+.btn-yeah {
+  padding: 10px 20px;
+  background-color: #ef00df;
+  color: #fff;
+  border: 2px solid #ef00df;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 4px #ef00df;
+}
+
+/* Hover del boton */
+.btn-yeah:hover {
+  background-color: #ff33f0;
+  border-color: #ff33f0;
+  box-shadow: 0 0 6px #ff33f0;
+  color: #fff;
+}
+
+/* Frase de marca */
+.container-frase {
+  background-color: rgba(240, 9, 205, 0.9);
+  padding: 40px;
+  color: #252424;
+  text-align: center;
+  font-weight: bold;
+  border-top: 2px solid #ef00df;
+}
+
+/* Para el "contactanos" */
+
+.contactanos-section {
+  background-color: #121212;
+  border-top: 1px solid #333;
+}
+
+.btn-magenta {
+  background-color: #ef00df;
+  color: #fff;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-magenta:hover {
+  background-color: #c700b8;
+}
