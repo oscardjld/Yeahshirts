@@ -11,6 +11,7 @@ import Gamerfront from '../assets/Gamerfront.png';
 import products from '../data/products';
 import Logo2 from '../assets/Logo yeah.png';
 import Contactanos from '../components/Contactanos';
+import { toast } from 'react-toastify';
 
 function Home() {
     const { addToCart, cartItems } = useContext(CartContext);
@@ -32,12 +33,20 @@ function Home() {
 
     const handleAddToCart = (product) => {
         const alreadyInCart = cartItems.some(item => item.id === product.id);
+
         if (!alreadyInCart) {
         addToCart(product);
         setAddedItems(prev => [...prev, product.id]);
-        alert(`🛒 "${product.title}" agregado al carrito`);
+
+        toast.success(`🛒 "${product.title}" agregado al carrito`, {
+            position: 'bottom-right',
+            autoClose: 2000,
+        });
         } else {
-        alert(`⚠️ "${product.title}" ya está en el carrito`);
+        toast.info(`⚠️ "${product.title}" ya está en el carrito`, {
+            position: 'bottom-right',
+            autoClose: 2000,
+        });
         }
     };
 
@@ -133,7 +142,7 @@ function Home() {
             </div>
         </section>
 
-        {/* Frase de marca */}
+        {/* Frase de Yeah */}
         <section className="container-frase">
             <motion.h3
             className="text-light fw-bold"
@@ -149,6 +158,6 @@ function Home() {
         <Contactanos />
         </div>
     );
-    }
+}
 
 export default Home;

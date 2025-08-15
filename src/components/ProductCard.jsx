@@ -1,9 +1,17 @@
-
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 
 function ProductCard({ id, title, image, price }) {
     const { addToCart } = useContext(CartContext);
+    const [isAdded, setIsAdded] = useState(false);
+
+    const handleAddToCart = () => {
+        addToCart({ id, title, image, price });
+        setIsAdded(true);
+
+        // volver a estado normal 
+        setTimeout(() => setIsAdded(false), 10000);
+    };
 
     return (
         <div className="card bg-dark text-light h-100">
@@ -12,10 +20,11 @@ function ProductCard({ id, title, image, price }) {
             <h5 className="card-title">{title}</h5>
             <p className="card-text">${price}</p>
             <button
-            className="btn btn-outline-light mt-auto"
-            onClick={() => addToCart({ id, title, image, price })}
+            className={`btn-yeah ${isAdded ? 'btn-success' : ''}`}
+            onClick={handleAddToCart}
+            disabled={isAdded}
             >
-            Agregar al carrito
+            {isAdded ? 'Agregado ✅' : 'Comprar ahora'}
             </button>
         </div>
         </div>

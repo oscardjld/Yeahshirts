@@ -10,15 +10,16 @@ import Login from './pages/Login';
 import Cart from './pages/Cart';
 import About from './pages/About';
 import Footer from './components/Footer';
-
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Navbar />
+      <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/anime" element={<Anime />} />
@@ -28,11 +29,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
-
         </Routes>
+        <ToastContainer position="bottom-right" autoClose={2000} />
+      </main>
       <Footer />
-
-    </>
+    </div>
   );
 }
 
